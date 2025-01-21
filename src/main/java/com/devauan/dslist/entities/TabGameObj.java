@@ -2,6 +2,7 @@ package com.devauan.dslist.entities;
 
 import jakarta.persistence.*;
 
+import java.beans.ConstructorProperties;
 import java.util.Objects;
 
 @Entity
@@ -25,8 +26,17 @@ public class TabGameObj {
     @Column(name = "tx_img_url")
     private String txImgUrl;
 
-    @Column(name = "tx_short_description")
+    @Column(name = "tx_short_description", columnDefinition = "TEXT")
     private String txShortDescription;
+
+    @Column(name = "tx_long_description", columnDefinition = "TEXT")
+    private String txLongDescription;
+
+    @Column(name = "tx_platforms")
+    private String txPlatforms;
+
+    @Column(name = "vl_score")
+    private Double vlScore;
 
     public TabGameObj() {
     }
@@ -86,6 +96,30 @@ public class TabGameObj {
 
     public void setTxShortDescription(String txShortDescription) {
         this.txShortDescription = txShortDescription;
+    }
+
+    public String getTxLongDescription() {
+        return txLongDescription;
+    }
+
+    public void setTxLongDescription(String txLongDescription) {
+        this.txLongDescription = txLongDescription;
+    }
+
+    public String getTxPlatforms() {
+        return txPlatforms;
+    }
+
+    public void setTxPlatforms(String txPlatforms) {
+        this.txPlatforms = txPlatforms;
+    }
+
+    public Double getVlScore() {
+        return vlScore;
+    }
+
+    public void setVlScore(Double vlScore) {
+        this.vlScore = vlScore;
     }
 
     @Override
