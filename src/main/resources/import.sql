@@ -8,3 +8,18 @@ INSERT INTO tab_game (tx_title, vl_score, vl_year, tx_genre, tx_platforms, tx_im
 INSERT INTO tab_game (tx_title, vl_score, vl_year, tx_genre, tx_platforms, tx_img_url, tx_short_description, tx_long_description) VALUES ('Ori and the Blind Forest', 4, 2015, 'Platform', 'XBox, Playstation, PC', 'https://raw.githubusercontent.com/devsuperior/java-spring-dslist/main/resources/8.png', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit esse officiis corrupti unde repellat non quibusdam! Id nihil itaque ipsum!', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus dolorum illum placeat eligendi, quis maiores veniam. Incidunt dolorum, nisi deleniti dicta odit voluptatem nam provident temporibus reprehenderit blanditiis consectetur tenetur. Dignissimos blanditiis quod corporis iste, aliquid perspiciatis architecto quasi tempore ipsam voluptates ea ad distinctio, sapiente qui, amet quidem culpa.');
 INSERT INTO tab_game (tx_title, vl_score, vl_year, tx_genre, tx_platforms, tx_img_url, tx_short_description, tx_long_description) VALUES ('Cuphead', 4.6, 2017, 'Platform', 'XBox, Playstation, PC', 'https://raw.githubusercontent.com/devsuperior/java-spring-dslist/main/resources/9.png', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit esse officiis corrupti unde repellat non quibusdam! Id nihil itaque ipsum!', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus dolorum illum placeat eligendi, quis maiores veniam. Incidunt dolorum, nisi deleniti dicta odit voluptatem nam provident temporibus reprehenderit blanditiis consectetur tenetur. Dignissimos blanditiis quod corporis iste, aliquid perspiciatis architecto quasi tempore ipsam voluptates ea ad distinctio, sapiente qui, amet quidem culpa.');
 INSERT INTO tab_game (tx_title, vl_score, vl_year, tx_genre, tx_platforms, tx_img_url, tx_short_description, tx_long_description) VALUES ('Sonic CD', 4, 1993, 'Platform', 'Sega CD, PC', 'https://raw.githubusercontent.com/devsuperior/java-spring-dslist/main/resources/10.png', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit esse officiis corrupti unde repellat non quibusdam! Id nihil itaque ipsum!', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus dolorum illum placeat eligendi, quis maiores veniam. Incidunt dolorum, nisi deleniti dicta odit voluptatem nam provident temporibus reprehenderit blanditiis consectetur tenetur. Dignissimos blanditiis quod corporis iste, aliquid perspiciatis architecto quasi tempore ipsam voluptates ea ad distinctio, sapiente qui, amet quidem culpa.');
+
+INSERT INTO tab_game_list (tx_name) VALUES ('Aventura e RPG');
+INSERT INTO tab_game_list (tx_name) VALUES ('Jogos de plataforma');
+
+INSERT INTO tab_belonging (cd_game_list, cd_game, vl_position) VALUES (1, 1, 0);
+INSERT INTO tab_belonging (cd_game_list, cd_game, vl_position) VALUES (1, 2, 1);
+INSERT INTO tab_belonging (cd_game_list, cd_game, vl_position) VALUES (1, 3, 2);
+INSERT INTO tab_belonging (cd_game_list, cd_game, vl_position) VALUES (1, 4, 3);
+INSERT INTO tab_belonging (cd_game_list, cd_game, vl_position) VALUES (1, 5, 4);
+
+INSERT INTO tab_belonging (cd_game_list, cd_game, vl_position) VALUES (2, 6, 0);
+INSERT INTO tab_belonging (cd_game_list, cd_game, vl_position) VALUES (2, 7, 1);
+INSERT INTO tab_belonging (cd_game_list, cd_game, vl_position) VALUES (2, 8, 2);
+INSERT INTO tab_belonging (cd_game_list, cd_game, vl_position) VALUES (2, 9, 3);
+INSERT INTO tab_belonging (cd_game_list, cd_game, vl_position) VALUES (2, 10, 4);
