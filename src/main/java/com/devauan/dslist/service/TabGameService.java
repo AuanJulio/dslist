@@ -3,6 +3,7 @@ package com.devauan.dslist.service;
 import com.devauan.dslist.dto.TabGameCompleteDTO;
 import com.devauan.dslist.dto.TabGameDTO;
 import com.devauan.dslist.entities.TabGameObj;
+import com.devauan.dslist.projections.TabGameMinProjection;
 import com.devauan.dslist.repositories.TabGameRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -27,5 +28,11 @@ public class TabGameService {
     public TabGameCompleteDTO findById(Long id) {
         TabGameObj result = tabGameRepository.findById(id).get();
         return new TabGameCompleteDTO(result);
+    }
+
+    @Transactional(readOnly = true)
+    public List<TabGameDTO> findByList(Long cdGameList) {
+        List<TabGameMinProjection> result = tabGameRepository.searchByList(cdGameList);
+        return result.stream().map(x -> new TabGameDTO(x)).toList();
     }
 }

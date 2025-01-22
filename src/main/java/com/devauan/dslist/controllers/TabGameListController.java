@@ -20,8 +20,16 @@ public class TabGameListController {
     @Autowired
     private TabGameListService tabGameListService;
 
+    @Autowired
+    private TabGameService tabGameService;
+
     @GetMapping
     public List<TabGameListDTO> findAll() {
         return tabGameListService.findAll();
+    }
+
+    @GetMapping(value = "/{cdGameList}/games")
+    public List<TabGameDTO> findByList(@PathVariable Long cdGameList) {
+        return tabGameService.findByList(cdGameList);
     }
 }
