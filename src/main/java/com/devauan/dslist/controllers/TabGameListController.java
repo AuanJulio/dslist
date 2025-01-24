@@ -1,15 +1,13 @@
 package com.devauan.dslist.controllers;
 
+import com.devauan.dslist.dto.ReplacementDTO;
 import com.devauan.dslist.dto.TabGameCompleteDTO;
 import com.devauan.dslist.dto.TabGameDTO;
 import com.devauan.dslist.dto.TabGameListDTO;
 import com.devauan.dslist.service.TabGameListService;
 import com.devauan.dslist.service.TabGameService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -31,5 +29,10 @@ public class TabGameListController {
     @GetMapping(value = "/{cdGameList}/games")
     public List<TabGameDTO> findByList(@PathVariable Long cdGameList) {
         return tabGameService.findByList(cdGameList);
+    }
+
+    @PostMapping(value = "/{cdGameList}/replacement")
+    public void move(@PathVariable Long cdGameList, @RequestBody ReplacementDTO body) {
+        tabGameListService.move(cdGameList, body.getSourceIndex(), body.getDestinationIndex());
     }
 }
